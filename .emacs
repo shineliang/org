@@ -54,7 +54,6 @@
 (setq shell-file-name "bash")
 (setq explicit-shell-file-name shell-file-name)
 
-;; set tramp-default-method to “sshx” or “scpx”
 (cond  ((eq window-system 'w32)
 	(setq tramp-default-method "scpx"))
        (t
@@ -79,13 +78,14 @@
 <link rel=\"stylesheet\" href=\"style/lightbox.css\" type=\"text/css\" media=\"screen\" />")
  '(server-done-hook (quote ((lambda nil (kill-buffer nil)) delete-frame)))
  '(server-switch-hook (quote ((lambda nil (let (server-buf) (setq server-buf (current-buffer)) (bury-buffer) (switch-to-buffer-other-frame server-buf)))))))
-	
-	
-(set-terminal-coding-system 'chinese-iso-8bit)
-(set-keyboard-coding-system 'chinese-iso-8bit)
-(set-language-environment 'Chinese-GB)
-(setq locale-coding-system 'chinese-iso-8bit)
-(setq current-language-environment "Chinese-GB")
+
+(setq current-language-environment "UTF-8")  
+(setq default-input-method "chinese-py")  
+(setq locale-coding-system 'utf-8)  
+(set-terminal-coding-system 'utf-8)  
+(set-keyboard-coding-system 'utf-8)  
+(set-selection-coding-system 'utf-8)  
+(prefer-coding-system 'utf-8)  
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
@@ -98,11 +98,3 @@
   (interactive)
   (find-file "c:/Documents and Settings/shine_zhong/My Documents/Dropbox/org/gtd.org")
   )
-
-(require 'w3m-load)  
-(setq w3m-use-favicon nil)  
-(setq w3m-command-arguments '("-cookie" "-F"))  
-(setq w3m-use-cookies t)  ;打开cookie支持  
-(setq w3m-home-page "www.google.com")  ;设置主页  
-(setq w3m-default-display-inline-image t) ;显示图片  
-(setq w3m-default-toggle-inline-images t)  
