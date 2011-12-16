@@ -98,3 +98,11 @@
   (interactive)
   (find-file "c:/Documents and Settings/shine_zhong/My Documents/Dropbox/org/gtd.org")
   )
+
+(defun open-key-info-file ()  
+  (interactive)  
+  (split-window-horizontally)  
+  (find-file-other-window "c:/Documents and Settings/shine_zhong/My Documents/Dropbox/org/emacskeys.org")
+  (hide-body))  
+
+(global-set-key "\C-hz" 'open-key-info-file)  
