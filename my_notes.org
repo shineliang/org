@@ -1,2 +1,0 @@
-* Tips
-** Input the "entry/return" in emacs when searching/replacing (C-s C-s/C-M-%), C-q C-j

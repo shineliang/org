@@ -1,6 +1,5 @@
 *~
 .subversion/
-emacs-23.2/
-emacs-23.3/
-org/
-org-7.8.01/
+*log
+.ssh/
+*ics
